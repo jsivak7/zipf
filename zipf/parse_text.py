@@ -1,3 +1,7 @@
+import string
+import collections
+
+
 def _clean_gutenburg_text(text):
     """
     Find fences in a Gutenberg text and select the text between them
@@ -13,10 +17,6 @@ def _clean_gutenburg_text(text):
     assert 0.9 < end_pos / len(text) <= 1.0
 
     return text[start_pos:end_pos]
-
-
-import string
-import collections
 
 
 def count_words(f, clean_text=False):
